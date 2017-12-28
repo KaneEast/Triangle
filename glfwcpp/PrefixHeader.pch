@@ -13,6 +13,29 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #define STB_IMAGE_IMPLEMENTATION
+
+
+//triangles
+//#define k_DEF_triangle_1
+//#define k_DEF_quad_1
+//#define k_DEF_two_triangle
+//#define k_DEF_twoTriangle_vao_vbo
+//#define k_DEF_differentColor
+
+//shaders
+//#define k_DEF_shader_colorChange
+//#define k_DEF_shader_color3
+//#define k_DEF_useShaderClass
+
+//textures
+//#define k_DEF_Texture1
+
+//translate
+//#define k_DEF_translate_1
+//#define k_DEF_codinateSystem
+//#define k_DEF_Camera
+#define k_DEF_useCamera
+
 #ifdef __cplusplus
 #include "FileSystem/FileSystem.hpp"
 #endif
