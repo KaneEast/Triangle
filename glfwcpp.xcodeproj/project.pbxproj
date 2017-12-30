@@ -33,6 +33,7 @@
 		995447001FF33FF000D21B6F /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 995446FC1FF33FF000D21B6F /* texture.cpp */; };
 		995447021FF3405E00D21B6F /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 995447011FF3405E00D21B6F /* libGLEW.a */; };
 		9954470F1FF3429C00D21B6F /* main_useShaderClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9954470E1FF3429C00D21B6F /* main_useShaderClass.cpp */; };
+		995C68091FF78EB60028EA8C /* main_light_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 995C68081FF78EB60028EA8C /* main_light_1.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -357,6 +358,7 @@
 		995447131FF34F0E00D21B6F /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
 		99598D541FF0807B00EB94AF /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		99598D5A1FF0C04800EB94AF /* container2_specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container2_specular.png; sourceTree = "<group>"; };
+		995C68081FF78EB60028EA8C /* main_light_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_light_1.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -728,6 +730,7 @@
 		496838091FE16C26008CF242 /* glfwcpp */ = {
 			isa = PBXGroup;
 			children = (
+				995C68071FF78E9D0028EA8C /* Light */,
 				993F60C01FF4C9CC001CDCBB /* Camera */,
 				993F60BB1FF4B6D4001CDCBB /* Coordinate Systems */,
 				993F60B61FF49CBC001CDCBB /* Translate */,
@@ -875,6 +878,14 @@
 			path = GL;
 			sourceTree = "<group>";
 		};
+		995C68071FF78E9D0028EA8C /* Light */ = {
+			isa = PBXGroup;
+			children = (
+				995C68081FF78EB60028EA8C /* main_light_1.cpp */,
+			);
+			path = Light;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -951,6 +962,7 @@
 				995446ED1FF32D2F00D21B6F /* main_differentColor.cpp in Sources */,
 				995447001FF33FF000D21B6F /* texture.cpp in Sources */,
 				995446EB1FF32A0500D21B6F /* main_twoTriangle_vao_vbo.cpp in Sources */,
+				995C68091FF78EB60028EA8C /* main_light_1.cpp in Sources */,
 				995446E71FF3259900D21B6F /* main_quad.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
