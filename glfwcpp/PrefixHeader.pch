@@ -35,7 +35,10 @@
 //#define k_DEF_codinateSystem
 //#define k_DEF_Camera
 //#define k_DEF_useCamera
-#define k_DEF_light_1
+//#define k_DEF_light_1
+//#define k_DEF_DiffuseLighting
+//#define k_DEF_basic_lighting_specular         //镜面光
+#define k_DEF_materials                         //材质
 
 #ifdef __cplusplus
 #include "FileSystem/FileSystem.hpp"
