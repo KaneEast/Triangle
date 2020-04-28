@@ -321,6 +321,7 @@
 		496838201FE16E3E008CF242 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		496838281FE174C6008CF242 /* khrplatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = khrplatform.h; sourceTree = "<group>"; };
 		4968382A1FE174C6008CF242 /* glad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glad.h; sourceTree = "<group>"; };
+		49C8450C245873B90059E26C /* KKHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKHeader.h; sourceTree = "<group>"; };
 		993F60B21FF48541001CDCBB /* main_texture1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_texture1.cpp; sourceTree = "<group>"; };
 		993F60B41FF48603001CDCBB /* 4.1.texture.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 4.1.texture.vs; sourceTree = "<group>"; };
 		993F60B51FF48604001CDCBB /* 4.1.texture.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 4.1.texture.fs; sourceTree = "<group>"; };
@@ -778,6 +779,7 @@
 				4928C6CC1FEE7CB90089F6B7 /* FileSystem */,
 				491A2EEB1FE411FA00F4E040 /* resources */,
 				99598D541FF0807B00EB94AF /* PrefixHeader.pch */,
+				49C8450C245873B90059E26C /* KKHeader.h */,
 			);
 			path = glfwcpp;
 			sourceTree = "<group>";
