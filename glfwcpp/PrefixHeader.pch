@@ -16,7 +16,7 @@
 
 
 //triangles
-//#define k_DEF_triangle_1
+#define k_DEF_triangle_1
 //#define k_DEF_quad_1
 //#define k_DEF_two_triangle
 //#define k_DEF_twoTriangle_vao_vbo
@@ -38,7 +38,7 @@
 //#define k_DEF_light_1
 //#define k_DEF_DiffuseLighting
 //#define k_DEF_basic_lighting_specular         //镜面光
-#define k_DEF_materials                         //材质
+//#define k_DEF_materials                         //材质
 
 #ifdef __cplusplus
 #include "FileSystem/FileSystem.hpp"
