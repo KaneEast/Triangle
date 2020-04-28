@@ -1,14 +1,14 @@
 //
-//  KKHeader.h
+//  all.h
 //  glfwcpp
 //
 //  Created by inman on 2020/04/28.
 //  Copyright © 2020 inman. All rights reserved.
 //
 
-#ifndef KKHeader_h
-#define KKHeader_h
+#ifndef all_h
+#define all_h
 
-#include <iostream>
+#include "NEGLFW.hpp"
 
-#endif /* KKHeader_h */
+#endif /* all_h */

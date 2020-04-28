@@ -14,9 +14,12 @@
 
 #define STB_IMAGE_IMPLEMENTATION
 
+//#ifdef __cplusplus
+//#include "FileSystem/FileSystem.hpp"
+//#endif
 
 //triangles
-//#define k_DEF_triangle_1
+#define k_DEF_triangle_1
 //#define k_DEF_quad_1
 //#define k_DEF_two_triangle
 //#define k_DEF_twoTriangle_vao_vbo
@@ -32,16 +35,12 @@
 
 //translate
 //#define k_DEF_translate_1
-#define k_DEF_codinateSystem
+//#define k_DEF_codinateSystem
 //#define k_DEF_Camera
 //#define k_DEF_useCamera
 //#define k_DEF_light_1
 //#define k_DEF_DiffuseLighting
 //#define k_DEF_basic_lighting_specular         //镜面光
 //#define k_DEF_materials                         //材质
-
-#ifdef __cplusplus
-#include "FileSystem/FileSystem.hpp"
-#endif
 
 #endif /* PrefixHeader_pch */

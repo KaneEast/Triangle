@@ -17,6 +17,7 @@
 		4968381D1FE16E25008CF242 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4968381C1FE16E25008CF242 /* Cocoa.framework */; };
 		4968381F1FE16E33008CF242 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4968381E1FE16E33008CF242 /* OpenGL.framework */; };
 		496838211FE16E3E008CF242 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496838201FE16E3E008CF242 /* CoreVideo.framework */; };
+		49C8450F2458763C0059E26C /* NEGLFW.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C8450D2458763C0059E26C /* NEGLFW.cpp */; };
 		993F60B31FF48541001CDCBB /* main_texture1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 993F60B21FF48541001CDCBB /* main_texture1.cpp */; };
 		993F60B81FF49CD7001CDCBB /* main_translate_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 993F60B71FF49CD7001CDCBB /* main_translate_1.cpp */; };
 		993F60BD1FF4B74D001CDCBB /* main_cordinateSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 993F60BC1FF4B74D001CDCBB /* main_cordinateSystem.cpp */; };
@@ -321,7 +322,9 @@
 		496838201FE16E3E008CF242 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		496838281FE174C6008CF242 /* khrplatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = khrplatform.h; sourceTree = "<group>"; };
 		4968382A1FE174C6008CF242 /* glad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glad.h; sourceTree = "<group>"; };
-		49C8450C245873B90059E26C /* KKHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKHeader.h; sourceTree = "<group>"; };
+		49C8450D2458763C0059E26C /* NEGLFW.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NEGLFW.cpp; sourceTree = "<group>"; };
+		49C8450E2458763C0059E26C /* NEGLFW.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NEGLFW.hpp; sourceTree = "<group>"; };
+		49C84511245879580059E26C /* all.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = all.h; sourceTree = "<group>"; };
 		993F60B21FF48541001CDCBB /* main_texture1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_texture1.cpp; sourceTree = "<group>"; };
 		993F60B41FF48603001CDCBB /* 4.1.texture.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 4.1.texture.vs; sourceTree = "<group>"; };
 		993F60B51FF48604001CDCBB /* 4.1.texture.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 4.1.texture.fs; sourceTree = "<group>"; };
@@ -769,17 +772,17 @@
 		496838091FE16C26008CF242 /* glfwcpp */ = {
 			isa = PBXGroup;
 			children = (
+				49C84510245878680059E26C /* Foundation */,
+				995446EE1FF32EFA00D21B6F /* 0_Triangle */,
 				995C68071FF78E9D0028EA8C /* Light */,
 				993F60C01FF4C9CC001CDCBB /* Camera */,
 				993F60BB1FF4B6D4001CDCBB /* Coordinate Systems */,
 				993F60B61FF49CBC001CDCBB /* Translate */,
 				993F60B11FF48428001CDCBB /* Texture */,
 				995446EF1FF32F1500D21B6F /* Shader */,
-				995446EE1FF32EFA00D21B6F /* Triangle */,
 				4928C6CC1FEE7CB90089F6B7 /* FileSystem */,
 				491A2EEB1FE411FA00F4E040 /* resources */,
 				99598D541FF0807B00EB94AF /* PrefixHeader.pch */,
-				49C8450C245873B90059E26C /* KKHeader.h */,
 			);
 			path = glfwcpp;
 			sourceTree = "<group>";
@@ -835,6 +838,16 @@
 			path = glad;
 			sourceTree = "<group>";
 		};
+		49C84510245878680059E26C /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				49C8450D2458763C0059E26C /* NEGLFW.cpp */,
+				49C8450E2458763C0059E26C /* NEGLFW.hpp */,
+				49C84511245879580059E26C /* all.h */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		993F60B11FF48428001CDCBB /* Texture */ = {
 			isa = PBXGroup;
 			children = (
@@ -868,7 +881,7 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
-		995446EE1FF32EFA00D21B6F /* Triangle */ = {
+		995446EE1FF32EFA00D21B6F /* 0_Triangle */ = {
 			isa = PBXGroup;
 			children = (
 				4968380A1FE16C26008CF242 /* main.cpp */,
@@ -877,7 +890,7 @@
 				995446EA1FF32A0500D21B6F /* main_twoTriangle_vao_vbo.cpp */,
 				995446EC1FF32D2F00D21B6F /* main_differentColor.cpp */,
 			);
-			path = Triangle;
+			path = 0_Triangle;
 			sourceTree = "<group>";
 		};
 		995446EF1FF32F1500D21B6F /* Shader */ = {
@@ -990,6 +1003,7 @@
 				994C727C1FFDCD52003032AA /* main_materials.cpp in Sources */,
 				993F60C41FF4E0BC001CDCBB /* main_useCamera.cpp in Sources */,
 				993F60C21FF4C9E1001CDCBB /* main_Camera.cpp in Sources */,
+				49C8450F2458763C0059E26C /* NEGLFW.cpp in Sources */,
 				993F60B81FF49CD7001CDCBB /* main_translate_1.cpp in Sources */,
 				9954470F1FF3429C00D21B6F /* main_useShaderClass.cpp in Sources */,
 				995446FF1FF33FF000D21B6F /* sprite_renderer.cpp in Sources */,
