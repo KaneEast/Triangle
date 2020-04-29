@@ -14,20 +14,26 @@
 class Object;
 class Vertex;
 
+// 図形の描画
 class Shape
 {
+    // 図形データ
     std::shared_ptr<const Object> object;
     
 protected:
-    
-    //
+    // 描画に使う頂点の数
     const GLsizei vertexcount;
     
 public:
+    // コンストラクタ
+    // size: 頂点の位置の次元
+    // vertexcount: 頂点の数
     Shape(GLint size, GLsizei vertexcount, const Vertex * vertex);
     
+    // 描画
     void draw() const;
     
+    // 描画の実行
     virtual void execute() const;
 };
 

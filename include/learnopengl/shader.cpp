@@ -1,14 +1,14 @@
-/*******************************************************************
- ** This code is part of Breakout.
- **
- ** Breakout is free software: you can redistribute it and/or modify
- ** it under the terms of the CC BY 4.0 license as published by
- ** Creative Commons, either version 4 of the License, or (at your
- ** option) any later version.
- ******************************************************************/
 #include "Shader.h"
-
 #include <iostream>
+
+/*
+ *1 glCreateProgram:    プログラムオブジェクトを作成
+ *2 glCreateShader:     バーテックスシェーダとフラグメントシェーダのシェーダオブジェクトを作成
+ *3 glShaderSource:     作成したそれぞれのシェーダオブジェクトに対してソースプログラムを読み込む
+ *4 glCompileShader:    読み込んだソースプログラムをコンパイルする
+ *5 glAttachShader:     プログラムオブジェクトにシェーダオブジェクトを組み込む
+ *6 glLinkProgram:      プログラムオブジェクトをリンクする
+ */
 
 Shader &Shader::Use()
 {

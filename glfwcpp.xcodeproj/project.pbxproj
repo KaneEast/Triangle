@@ -331,6 +331,8 @@
 		49C8451E24596B550059E26C /* Window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
 		49C845202459ADB20059E26C /* FileReader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileReader.hpp; sourceTree = "<group>"; };
 		49C845212459B34A0059E26C /* FileReader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileReader.cpp; sourceTree = "<group>"; };
+		49C845242459BB900059E26C /* vsFileMemo.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = vsFileMemo.vs; sourceTree = "<group>"; };
+		49C845252459BC3F0059E26C /* fsFileMemo.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = fsFileMemo.fs; sourceTree = "<group>"; };
 		993F60B21FF48541001CDCBB /* main_texture1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_texture1.cpp; sourceTree = "<group>"; };
 		993F60B41FF48603001CDCBB /* 4.1.texture.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 4.1.texture.vs; sourceTree = "<group>"; };
 		993F60B51FF48604001CDCBB /* 4.1.texture.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 4.1.texture.fs; sourceTree = "<group>"; };
@@ -367,7 +369,6 @@
 		995447051FF3406900D21B6F /* glew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glew.h; sourceTree = "<group>"; };
 		995447061FF3406900D21B6F /* glxew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glxew.h; sourceTree = "<group>"; };
 		995447071FF3406900D21B6F /* wglew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wglew.h; sourceTree = "<group>"; };
-		9954470B1FF3418C00D21B6F /* ShaderSS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderSS.h; sourceTree = "<group>"; };
 		9954470E1FF3429C00D21B6F /* main_useShaderClass.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_useShaderClass.cpp; sourceTree = "<group>"; };
 		995447111FF343C700D21B6F /* useShaderClass.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = useShaderClass.fs; sourceTree = "<group>"; };
 		995447121FF343C700D21B6F /* useShaderClass.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = useShaderClass.vs; sourceTree = "<group>"; };
@@ -848,6 +849,8 @@
 			isa = PBXGroup;
 			children = (
 				49C84513245925070059E26C /* lern2020_0.cpp */,
+				49C845242459BB900059E26C /* vsFileMemo.vs */,
+				49C845252459BC3F0059E26C /* fsFileMemo.fs */,
 			);
 			path = LERN2020;
 			sourceTree = "<group>";
@@ -906,7 +909,6 @@
 		995446F41FF33FF000D21B6F /* learnopengl */ = {
 			isa = PBXGroup;
 			children = (
-				9954470B1FF3418C00D21B6F /* ShaderSS.h */,
 				995446F51FF33FF000D21B6F /* camera.h */,
 				995446F61FF33FF000D21B6F /* Mesh.h */,
 				995446F71FF33FF000D21B6F /* Model.h */,
