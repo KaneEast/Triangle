@@ -1,6 +1,8 @@
 
 #include "NEGLFW.hpp"
 
+#define RESIZE_VIEWPORT     0
+
 void ne_glfwinit()
 {
     // GLFW を初期化する
@@ -22,7 +24,9 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     // make sure the viewport matches the new window dimensions; note that width and
     // height will be significantly larger than specified on retina displays.
-    glViewport(0, 0, width, height);
+    if (RESIZE_VIEWPORT) {
+        glViewport(0, 0, width, height);
+    }
 }
 
 // glfw window creation

@@ -11,5 +11,6 @@
 
 #include "NEGLFW.hpp"
 #include <memory>
+#include "Window.hpp"
 
 #endif /* all_h */

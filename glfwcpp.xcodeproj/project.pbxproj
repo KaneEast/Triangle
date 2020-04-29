@@ -21,6 +21,7 @@
 		49C84514245925070059E26C /* lern2020_0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C84513245925070059E26C /* lern2020_0.cpp */; };
 		49C845172459559D0059E26C /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C845152459559D0059E26C /* Object.cpp */; };
 		49C8451A2459596D0059E26C /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C845182459596D0059E26C /* Shape.cpp */; };
+		49C8451F24596B550059E26C /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C8451D24596B550059E26C /* Window.cpp */; };
 		993F60B31FF48541001CDCBB /* main_texture1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 993F60B21FF48541001CDCBB /* main_texture1.cpp */; };
 		993F60B81FF49CD7001CDCBB /* main_translate_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 993F60B71FF49CD7001CDCBB /* main_translate_1.cpp */; };
 		993F60BD1FF4B74D001CDCBB /* main_cordinateSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 993F60BC1FF4B74D001CDCBB /* main_cordinateSystem.cpp */; };
@@ -335,6 +336,8 @@
 		49C845192459596D0059E26C /* Shape.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Shape.hpp; sourceTree = "<group>"; };
 		49C8451B245962910059E26C /* L2020_0.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = L2020_0.vs; sourceTree = "<group>"; };
 		49C8451C245962A10059E26C /* L2020_0.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = L2020_0.fs; sourceTree = "<group>"; };
+		49C8451D24596B550059E26C /* Window.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
+		49C8451E24596B550059E26C /* Window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
 		993F60B21FF48541001CDCBB /* main_texture1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_texture1.cpp; sourceTree = "<group>"; };
 		993F60B41FF48603001CDCBB /* 4.1.texture.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 4.1.texture.vs; sourceTree = "<group>"; };
 		993F60B51FF48604001CDCBB /* 4.1.texture.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 4.1.texture.fs; sourceTree = "<group>"; };
@@ -861,6 +864,8 @@
 				49C845162459559D0059E26C /* Object.hpp */,
 				49C845182459596D0059E26C /* Shape.cpp */,
 				49C845192459596D0059E26C /* Shape.hpp */,
+				49C8451D24596B550059E26C /* Window.cpp */,
+				49C8451E24596B550059E26C /* Window.hpp */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1044,6 +1049,7 @@
 				492C9DFA1FED2E09000A9575 /* dummy.cpp in Sources */,
 				49C845172459559D0059E26C /* Object.cpp in Sources */,
 				993F60BD1FF4B74D001CDCBB /* main_cordinateSystem.cpp in Sources */,
+				49C8451F24596B550059E26C /* Window.cpp in Sources */,
 				995446ED1FF32D2F00D21B6F /* main_differentColor.cpp in Sources */,
 				995447001FF33FF000D21B6F /* texture.cpp in Sources */,
 				995C23581FFCD78800B19DC6 /* main_basic_lighting_specular.cpp in Sources */,
