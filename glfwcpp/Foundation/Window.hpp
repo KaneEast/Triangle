@@ -16,9 +16,6 @@ class Window
     // ウィンドウのハンドル
     GLFWwindow * const window;
     
-//    // 縦横比
-//    GLfloat aspect;
-    
     // ウィンドウのサイズ
     GLfloat size[2];
     
@@ -90,15 +87,12 @@ public:
         // このインスタンスのthisポインタを得る
         Window* const instance = static_cast<Window*>(glfwGetWindowUserPointer(window));
         if (instance) {
-//            instance->aspect = static_cast<GLfloat>(width) / static_cast<GLfloat>(height);
             instance->size[0] = width;
             instance->size[1] = height;
         }
     }
     
-//    GLfloat getAspect() const { return aspect; }
     const GLfloat* getsize() const { return size; }
-    
     GLfloat getScale() const { return scale; }
     
 };

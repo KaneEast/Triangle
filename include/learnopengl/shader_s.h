@@ -1,7 +1,7 @@
 #ifndef SHADER_H
 #define SHADER_H
 
-//#include <glad/glad.h> // TODO:k 202004
+// // TODO:k 202004
 #include <glm/glm.hpp>
 
 #include <string>

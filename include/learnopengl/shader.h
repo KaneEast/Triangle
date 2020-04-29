@@ -6,8 +6,8 @@
  ** Creative Commons, either version 4 of the License, or (at your
  ** option) any later version.
  ******************************************************************/
-#ifndef SHADER_H
-#define SHADER_H
+#ifndef SHADERSS_H
+#define SHADERSS_H
 
 #include <string>
 

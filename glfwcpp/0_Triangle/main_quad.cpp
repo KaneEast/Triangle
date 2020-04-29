@@ -1,6 +1,5 @@
 #ifdef k_DEF_quad_1
 
-#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 #include <iostream>
@@ -50,13 +49,7 @@ int main()
     glfwMakeContextCurrent(window);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     
-    // glad: load all OpenGL function pointers
-    // ---------------------------------------
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    {
-        std::cout << "Failed to initialize GLAD" << std::endl;
-        return -1;
-    }
+    
     
     
     // build and compile our shader program

@@ -1,5 +1,8 @@
+#pragma once
 #ifndef __STB_IMAGE_H__
 #define __STB_IMAGE_H__
+
+
 
 /* stb_image - v2.16 - public domain image loader - http://nothings.org/stb_image.h
  no warranty implied; use at your own risk

@@ -9,6 +9,7 @@
 #ifndef Shape_hpp
 #define Shape_hpp
 
+#include "all.h"
 #include "Object.hpp"
 
 class Shape

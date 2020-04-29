@@ -18,35 +18,6 @@ void ne_glfwinit()
     atexit(glfwTerminate);
 }
 
-// glfw: whenever the window size changed (by OS or user resize) this callback function executes
-// ---------------------------------------------------------------------------------------------
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-    // make sure the viewport matches the new window dimensions; note that width and
-    // height will be significantly larger than specified on retina displays.
-    if (RESIZE_VIEWPORT) {
-        glViewport(0, 0, width, height);
-    }
-}
-
-// glfw window creation
-// --------------------
-GLFWwindow* ne_createWindow(float width, float height, const char* title)
-{
-    // ウィンドウを作成する
-    GLFWwindow* window = glfwCreateWindow(width, height, title, NULL, NULL);
-    if (window == NULL)
-    {
-        std::cout << "Failed to create GLFW window" << std::endl;
-        // ウィンドウが閉じたら終了処理を行う
-        glfwTerminate();
-        return NULL;
-    }
-//    glfwMakeContextCurrent(window); //TODO: ??
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-    return window;
-}
-
 bool ne_glewInit()
 {
     // GLEW を初期化する

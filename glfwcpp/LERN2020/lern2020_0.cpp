@@ -1,16 +1,10 @@
 #ifdef k_DEF_LERN2020_0
 
 #include "all.h"
+#include "NEGLFW.hpp"
+#include "Object.hpp"
 #include "Shape.hpp"
-#include "shader_s.h"
 
-//constexpr Object::Vertex rectangleVertex[] =
-//{
-//    {-0.5f, -0.5f},
-//    {.5f, -.5f},
-//    {.5f, .5f},
-//    {-0.5f, .5f},
-//};
 // 八面体の頂点の位置
 constexpr Object::Vertex octahedronVertex[] = {
     { 0.0f, 1.0f, 0.0f },

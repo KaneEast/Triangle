@@ -1,6 +1,7 @@
 #ifdef k_DEF_triangle_1
 
 #include "all.h"
+#include "NEGLFW.hpp"
 
 void processInput(GLFWwindow *window);
 
@@ -24,21 +25,14 @@ const char *fragmentShaderSource = "#version 330 core\n"
 int main()
 {
     ne_glfwinit();
+    Window window = Window(800, 600, "GAME2020_0");
     
-    // glfw window creation
-    // --------------------
-    GLFWwindow* window = ne_createWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL");
-    if (window == NULL) {
+    // GLEW を初期化する
+    if (!ne_glewInit()) {
         return -1;
     }
     
-    // glad: load all OpenGL function pointers
-    // ---------------------------------------
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    {
-        std::cout << "Failed to initialize GLAD" << std::endl;
-        return -1;
-    }
+    
     
     
     // build and compile our shader program
@@ -114,12 +108,8 @@ int main()
     
     // render loop
     // -----------
-    while (!glfwWindowShouldClose(window))
+    while (window)
     {
-        // input
-        // -----
-        processInput(window);
-        
         // render
         // ------
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -133,7 +123,7 @@ int main()
         
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
-        glfwSwapBuffers(window);
+        window.swapBuffers();
         glfwPollEvents();
     }
     
@@ -147,15 +137,5 @@ int main()
     glfwTerminate();
     return 0;
 }
-
-// process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
-// ---------------------------------------------------------------------------------------------------------
-void processInput(GLFWwindow *window)
-{
-    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
-}
-
-
 
 #endif

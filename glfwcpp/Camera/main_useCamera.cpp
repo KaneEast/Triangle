@@ -1,6 +1,6 @@
 #ifdef k_DEF_useCamera
 
-#include <glad/glad.h>
+
 #include <GLFW/glfw3.h>
 #include <stb_image.h>
 
@@ -62,13 +62,7 @@ int main()
     // tell GLFW to capture our mouse
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     
-    // glad: load all OpenGL function pointers
-    // ---------------------------------------
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    {
-        std::cout << "Failed to initialize GLAD" << std::endl;
-        return -1;
-    }
+    
     
     // configure global opengl state
     // -----------------------------

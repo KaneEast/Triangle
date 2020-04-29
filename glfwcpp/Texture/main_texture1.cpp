@@ -1,53 +1,16 @@
 #ifdef k_DEF_Texture1
 
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#include <stb_image.h>
+#define STB_IMAGE_IMPLEMENTATION
+#include "all.h"
+#include "NEGLFW.hpp"
 
-#include <learnopengl/shader_s.h>
-
-#include <iostream>
-
-void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
-
-// settings
-const unsigned int SCR_WIDTH = 800;
-const unsigned int SCR_HEIGHT = 600;
 float mixVal = .1f;
 
 int main()
 {
-    // glfw: initialize and configure
-    // ------------------------------
-    glfwInit();
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    
-#ifdef __APPLE__
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // uncomment this statement to fix compilation on OS X
-#endif
-    
-    // glfw window creation
-    // --------------------
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
-    if (window == NULL)
-    {
-        std::cout << "Failed to create GLFW window" << std::endl;
-        glfwTerminate();
-        return -1;
-    }
-    glfwMakeContextCurrent(window);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-    
-    // glad: load all OpenGL function pointers
-    // ---------------------------------------
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    {
-        std::cout << "Failed to initialize GLAD" << std::endl;
-        return -1;
-    }
+    ne_glfwinit();
+    Window window = Window(800, 600, "GAME2020_0");
     
     // build and compile our shader zprogram
     // ------------------------------------
@@ -110,7 +73,7 @@ int main()
     
     stbi_set_flip_vertically_on_load(true); // tell stb_image.h to flip loaded texture's on the y-axis.
     // The FileSystem::getPath(...) is part of the GitHub repository so we can find files on any IDE/platform; replace it with your own image path.
-    data = stbi_load(FileSystem::getPath("textures/container.jpg").c_str(), &width, &height, &nrChannels, 0);
+    data = stbi_load("textures/container.jpg", &width, &height, &nrChannels, 0);
     if (data)
     {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
@@ -133,7 +96,7 @@ int main()
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     // load image, create texture and generate mipmaps
-    data = stbi_load(FileSystem::getPath("textures/awesomeface.png").c_str(), &width, &height, &nrChannels, 0);
+    data = stbi_load("textures/awesomeface.png", &width, &height, &nrChannels, 0);
     if (data)
     {
         // note that the awesomeface.png has transparency and thus an alpha channel, so make sure to tell OpenGL the data type is of GL_RGBA
@@ -160,11 +123,11 @@ int main()
     bool isAdd = true;
     // render loop
     // -----------
-    while (!glfwWindowShouldClose(window))
+    while (window)
     {
         // input
         // -----
-        processInput(window);
+//        processInput(window.window);
         
         // render
         // ------
@@ -203,7 +166,8 @@ int main()
         
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
-        glfwSwapBuffers(window);
+        window.swapBuffers();
+        
         glfwPollEvents();
     }
     
@@ -229,15 +193,6 @@ void processInput(GLFWwindow *window)
         mixVal += .1f;
     else if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
         mixVal -= .1f;
-}
-
-// glfw: whenever the window size changed (by OS or user resize) this callback function executes
-// ---------------------------------------------------------------------------------------------
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-    // make sure the viewport matches the new window dimensions; note that width and
-    // height will be significantly larger than specified on retina displays.
-    glViewport(0, 0, width, height);
 }
 
 #endif
