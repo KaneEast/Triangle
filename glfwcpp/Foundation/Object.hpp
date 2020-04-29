@@ -16,7 +16,6 @@ struct Vertex
     GLfloat position[3];
 };
 
- 
 // 図形データ
 class Object
 {
