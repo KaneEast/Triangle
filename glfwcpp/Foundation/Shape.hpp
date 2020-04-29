@@ -10,7 +10,9 @@
 #define Shape_hpp
 
 #include "all.h"
-#include "Object.hpp"
+//#include "Object.hpp"
+class Object;
+class Vertex;
 
 class Shape
 {
@@ -22,7 +24,7 @@ protected:
     const GLsizei vertexcount;
     
 public:
-    Shape(GLint size, GLsizei vertexcount, const Object::Vertex * vertex);
+    Shape(GLint size, GLsizei vertexcount, const Vertex * vertex);
     
     void draw() const;
     

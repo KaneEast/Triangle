@@ -14,6 +14,7 @@
 
 #ifdef __cplusplus
 //#include "all.h"
+// includeできなくなった　glewとgladを一緒に使ったためか
 #endif
 
 //triangles

@@ -24,13 +24,18 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include <learnopengl/shader_s.h>
+#include <learnopengl/Shader.h>
 
 //#ifndef STB_IMAGE_IMPLEMENTATION
-
+// STB_IMAGE_IMPLEMENTATION must defined in cpp file
 #include <stb_image.h>
-//#endif
+#include "FileReader.hpp"
 
+
+
+// in the last
+#include "Shape.hpp"
+#include "Object.hpp"
 
 
 #endif /* all_h */

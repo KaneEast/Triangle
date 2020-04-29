@@ -7,8 +7,9 @@
 //
 
 #include "Shape.hpp"
+#include "Object.hpp"
 
-Shape::Shape(GLint size, GLsizei vertexcount, const Object::Vertex * vertex)
+Shape::Shape(GLint size, GLsizei vertexcount, const Vertex * vertex)
 :object(new Object(size, vertexcount, vertex))
 ,vertexcount(vertexcount)
 {

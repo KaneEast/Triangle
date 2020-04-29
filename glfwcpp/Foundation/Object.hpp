@@ -11,6 +11,11 @@
 
 #include "all.h"
 
+struct Vertex
+{
+    GLfloat position[3];
+};
+
 class Object
 {
     // 頂点配列オブジェクト名
@@ -20,12 +25,6 @@ class Object
     GLuint vbo;
     
 public:
-    
-    //
-    struct Vertex
-    {
-        GLfloat position[3];
-    };
     
     Object(GLint size, GLsizei vertexcount, const Vertex* vertex);
     virtual ~Object();
