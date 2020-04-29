@@ -27,15 +27,10 @@ int main()
     
     // glfw window creation
     // --------------------
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
-    if (window == NULL)
-    {
-        std::cout << "Failed to create GLFW window" << std::endl;
-        glfwTerminate();
+    GLFWwindow* window = ne_createWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL");
+    if (window == NULL) {
         return -1;
     }
-    glfwMakeContextCurrent(window);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     
     // glad: load all OpenGL function pointers
     // ---------------------------------------

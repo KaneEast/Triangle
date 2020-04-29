@@ -19,7 +19,8 @@
 //#endif
 
 //triangles
-#define k_DEF_triangle_1
+#define k_DEF_LERN2020_0
+//#define k_DEF_triangle_1
 //#define k_DEF_quad_1
 //#define k_DEF_two_triangle
 //#define k_DEF_twoTriangle_vao_vbo

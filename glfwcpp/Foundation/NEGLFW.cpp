@@ -3,6 +3,7 @@
 
 void ne_glfwinit()
 {
+    // GLFW を初期化する
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -11,6 +12,8 @@ void ne_glfwinit()
 #ifdef __APPLE__
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // uncomment this statement to fix compilation on OS X
 #endif
+    
+    atexit(glfwTerminate);
 }
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
@@ -21,3 +24,22 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     // height will be significantly larger than specified on retina displays.
     glViewport(0, 0, width, height);
 }
+
+// glfw window creation
+// --------------------
+GLFWwindow* ne_createWindow(float width, float height, const char* title)
+{
+    // ウィンドウを作成する
+    GLFWwindow* window = glfwCreateWindow(width, height, title, NULL, NULL);
+    if (window == NULL)
+    {
+        std::cout << "Failed to create GLFW window" << std::endl;
+        // ウィンドウが閉じたら終了処理を行う
+        glfwTerminate();
+        return NULL;
+    }
+    glfwMakeContextCurrent(window);
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    return window;
+}
+

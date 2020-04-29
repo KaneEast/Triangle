@@ -18,6 +18,7 @@
 		4968381F1FE16E33008CF242 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4968381E1FE16E33008CF242 /* OpenGL.framework */; };
 		496838211FE16E3E008CF242 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496838201FE16E3E008CF242 /* CoreVideo.framework */; };
 		49C8450F2458763C0059E26C /* NEGLFW.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C8450D2458763C0059E26C /* NEGLFW.cpp */; };
+		49C84514245925070059E26C /* lern2020_0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C84513245925070059E26C /* lern2020_0.cpp */; };
 		993F60B31FF48541001CDCBB /* main_texture1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 993F60B21FF48541001CDCBB /* main_texture1.cpp */; };
 		993F60B81FF49CD7001CDCBB /* main_translate_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 993F60B71FF49CD7001CDCBB /* main_translate_1.cpp */; };
 		993F60BD1FF4B74D001CDCBB /* main_cordinateSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 993F60BC1FF4B74D001CDCBB /* main_cordinateSystem.cpp */; };
@@ -325,6 +326,7 @@
 		49C8450D2458763C0059E26C /* NEGLFW.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NEGLFW.cpp; sourceTree = "<group>"; };
 		49C8450E2458763C0059E26C /* NEGLFW.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NEGLFW.hpp; sourceTree = "<group>"; };
 		49C84511245879580059E26C /* all.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = all.h; sourceTree = "<group>"; };
+		49C84513245925070059E26C /* lern2020_0.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lern2020_0.cpp; sourceTree = "<group>"; };
 		993F60B21FF48541001CDCBB /* main_texture1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_texture1.cpp; sourceTree = "<group>"; };
 		993F60B41FF48603001CDCBB /* 4.1.texture.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 4.1.texture.vs; sourceTree = "<group>"; };
 		993F60B51FF48604001CDCBB /* 4.1.texture.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 4.1.texture.fs; sourceTree = "<group>"; };
@@ -772,6 +774,7 @@
 		496838091FE16C26008CF242 /* glfwcpp */ = {
 			isa = PBXGroup;
 			children = (
+				49C84512245924910059E26C /* LERN2020 */,
 				49C84510245878680059E26C /* Foundation */,
 				995446EE1FF32EFA00D21B6F /* 0_Triangle */,
 				995C68071FF78E9D0028EA8C /* Light */,
@@ -846,6 +849,14 @@
 				49C84511245879580059E26C /* all.h */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		49C84512245924910059E26C /* LERN2020 */ = {
+			isa = PBXGroup;
+			children = (
+				49C84513245925070059E26C /* lern2020_0.cpp */,
+			);
+			path = LERN2020;
 			sourceTree = "<group>";
 		};
 		993F60B11FF48428001CDCBB /* Texture */ = {
@@ -1024,6 +1035,7 @@
 				995C68091FF78EB60028EA8C /* main_light_1.cpp in Sources */,
 				995446E71FF3259900D21B6F /* main_quad.cpp in Sources */,
 				995C23521FFCD3A300B19DC6 /* main_DiffuseLighting.cpp in Sources */,
+				49C84514245925070059E26C /* lern2020_0.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1136,6 +1148,7 @@
 		4968380F1FE16C26008CF242 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1156,6 +1169,7 @@
 		496838101FE16C26008CF242 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
