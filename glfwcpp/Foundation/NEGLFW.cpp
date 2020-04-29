@@ -38,8 +38,21 @@ GLFWwindow* ne_createWindow(float width, float height, const char* title)
         glfwTerminate();
         return NULL;
     }
-    glfwMakeContextCurrent(window);
+//    glfwMakeContextCurrent(window); //TODO: ??
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     return window;
 }
 
+bool ne_glewInit()
+{
+    // GLEW を初期化する
+    // ハードウェアやドライバには用意されているにも関わらず、プラットフォームではサポートさ れていない OpenGL の機能を有効にし、プログラムから呼び出せるようにします。
+    glewExperimental = GL_TRUE;
+    if (glewInit() != GLEW_OK)
+    {
+        // GLEW の初期化に失敗した
+        std::cerr << "Can't initialize GLEW" << std::endl;
+        return false;
+    }
+    return true;
+}

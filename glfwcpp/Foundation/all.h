@@ -10,5 +10,6 @@
 #define all_h
 
 #include "NEGLFW.hpp"
+#include <memory>
 
 #endif /* all_h */
