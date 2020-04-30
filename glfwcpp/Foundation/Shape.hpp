@@ -33,7 +33,10 @@ public:
     // コンストラクタ
     // size: 頂点の位置の次元
     // vertexcount: 頂点の数
-    Shape(GLint size, GLsizei vertexcount, const Vertex * vertex, const unsigned int indices[], GLsizei indicecount, bool isFill = true);
+    // indices: EBO対象
+    // indicecount: EBO頂点の数
+    // isFill: 内部をFillするか
+    Shape(GLint size, GLsizei vertexcount, const Vertex * vertex, const unsigned int indices[] = nullptr, GLsizei indicecount = 0, bool isFill = true);
     
     // 描画
     void draw() const;

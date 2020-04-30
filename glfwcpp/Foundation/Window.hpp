@@ -65,7 +65,8 @@ public:
     explicit operator bool()
     {
         // イベントを取り出す
-        glfwWaitEvents();
+//        glfwWaitEvents();// ループをBlockする
+        glfwPollEvents();// ループをBlockしない
         
         //ウィンドウを閉じる必要がkなければtrueを返す
         return !glfwWindowShouldClose(window);

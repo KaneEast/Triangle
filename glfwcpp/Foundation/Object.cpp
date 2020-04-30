@@ -25,10 +25,15 @@ Object::Object(GLint size, GLsizei vertexcount, const Vertex* vertex, const unsi
     }
     
     // 結合されている頂点バッファオブジェクトを in 変数から参照できるようにする
-    glVertexAttribPointer(0, size, GL_FLOAT, GL_FALSE, size * sizeof(float), (void*)0);
+//    glVertexAttribPointer(0, size, GL_FLOAT, GL_FALSE, size * sizeof(float), (void*)0);
+    glVertexAttribPointer(0, size, GL_FLOAT, GL_FALSE, sizeof (Vertex), static_cast<Vertex *>(0)->position);
     glEnableVertexAttribArray(0);
     
+    glVertexAttribPointer(1, size, GL_FLOAT, GL_FALSE, sizeof (Vertex), static_cast<Vertex *>(0)->color);
+    glEnableVertexAttribArray(1);
     
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof (Vertex), static_cast<Vertex *>(0)->texture);
+    glEnableVertexAttribArray(2);
     
     // Old Code
 //    // 頂点配列オブジェクトを作成します。

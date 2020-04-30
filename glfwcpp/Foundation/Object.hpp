@@ -14,6 +14,8 @@
 struct Vertex
 {
     GLfloat position[3];
+    GLfloat color[3];
+    GLfloat texture[2];
 };
 
 // 図形データ
@@ -35,6 +37,8 @@ public:
     // vertexcount: 頂点の数
     Object(GLint size, GLsizei vertexcount, const Vertex* vertex, const unsigned int indices[], GLsizei indicecount);
     virtual ~Object();
+    
+    void configure();
     
     // 頂点配列オブジェクトの結合
     void bind() const;

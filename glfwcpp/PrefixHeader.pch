@@ -18,7 +18,8 @@
 #endif
 
 //triangles
-#define k_DEF_LERN2020_0
+//#define k_DEF_LERN2020_0
+#define k_DEF_LERN2020GLSL
 //#ifdef k_DEF_LERN2020_01
 //#define k_DEF_triangle_1
 //#define k_DEF_quad_1
