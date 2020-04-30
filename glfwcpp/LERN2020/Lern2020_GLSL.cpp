@@ -42,10 +42,11 @@ int main()
     shader.Compile(verextCode.c_str(), fragCode.c_str());
     
     // 描画する対象
-    std::unique_ptr<const Shape> shape(new Shape(3, 4, vertices, indices4, 6));
+    std::unique_ptr<const Shape> shape(new Shape(3, 4, vertices, indices4, sizeof(indices4) / sizeof(indices4[0])));
     
     
     // TODO:k make texture code esay 2020 0430
+    // TODO:k move below code to Shape or A new Class witch extends Shape
     
     // load and create a texture
     // -------------------------
@@ -60,7 +61,6 @@ int main()
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     // load image, create texture and generate mipmaps
     int width, height, nrChannels;
-    // The FileSystem::getPath(...) is part of the GitHub repository so we can find files on any IDE/platform; replace it with your own image path.
     unsigned char *data = stbi_load("textures/container.jpg", &width, &height, &nrChannels, 0);
     if (data)
     {
@@ -85,14 +85,11 @@ int main()
         glBindTexture(GL_TEXTURE_2D, texture);
         shader.Use();
         
-        
         // 図形を描画する
         shape->draw();
         
          // カラーバッファを入れ替える
         window.swapBuffers();
-        
-        std::cout << "Frame runs" << glfwGetTime() << std::endl;
     }
 }
 

@@ -24,7 +24,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include <learnopengl/Shader.h>
+#include <learnopengl/shader.h>
 
 //#ifndef STB_IMAGE_IMPLEMENTATION
 // STB_IMAGE_IMPLEMENTATION must defined in cpp file
