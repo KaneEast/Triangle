@@ -19,21 +19,27 @@ struct Vertex
 // 図形データ
 class Object
 {
+protected:
     // 頂点配列オブジェクト名
-    GLuint vao;
+    GLuint vao = -1;
     
     // 頂点バッファオブジェクト名
-    GLuint vbo;
+    GLuint vbo = -1;
+    
+    // エレメンバッファオブジェクト名
+    GLuint ebo = -1;
     
 public:
     // コンストラクタ
     // size: 頂点の位置の次元
     // vertexcount: 頂点の数
-    Object(GLint size, GLsizei vertexcount, const Vertex* vertex);
+    Object(GLint size, GLsizei vertexcount, const Vertex* vertex, const unsigned int indices[], GLsizei indicecount);
     virtual ~Object();
     
     // 頂点配列オブジェクトの結合
     void bind() const;
+    
+    GLuint getVAO() const;
     
 private:
     // コピーコンストラクタによるコピー禁止

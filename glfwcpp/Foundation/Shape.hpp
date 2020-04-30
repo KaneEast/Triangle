@@ -17,6 +17,7 @@ class Vertex;
 // 図形の描画
 class Shape
 {
+public:
     // 図形データ
     std::shared_ptr<const Object> object;
     
@@ -24,11 +25,15 @@ protected:
     // 描画に使う頂点の数
     const GLsizei vertexcount;
     
+    bool isFill;
+    
+    GLuint indiceCount = 0;
+    
 public:
     // コンストラクタ
     // size: 頂点の位置の次元
     // vertexcount: 頂点の数
-    Shape(GLint size, GLsizei vertexcount, const Vertex * vertex);
+    Shape(GLint size, GLsizei vertexcount, const Vertex * vertex, const unsigned int indices[], GLsizei indicecount, bool isFill = true);
     
     // 描画
     void draw() const;
@@ -36,5 +41,17 @@ public:
     // 描画の実行
     virtual void execute() const;
 };
+
+//class Triangle : public Shape
+//{
+//public:
+//    // コンストラクタ
+//    // size: 頂点の位置の次元
+//    // vertexcount: 頂点の数
+//    Triangle(GLint size, GLsizei vertexcount, const Vertex * vertex, const int indices[]);
+//    
+//    // 描画の実行
+//    virtual void execute() const;
+//};
 
 #endif /* Shape_hpp */

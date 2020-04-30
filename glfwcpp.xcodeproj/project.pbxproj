@@ -38,6 +38,7 @@
 		995C23521FFCD3A300B19DC6 /* main_DiffuseLighting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 995C23511FFCD3A300B19DC6 /* main_DiffuseLighting.cpp */; };
 		995C23581FFCD78800B19DC6 /* main_basic_lighting_specular.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 995C23571FFCD78800B19DC6 /* main_basic_lighting_specular.cpp */; };
 		995C68091FF78EB60028EA8C /* main_light_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 995C68081FF78EB60028EA8C /* main_light_1.cpp */; };
+		CE5DA561245AC8C1005AE0EB /* test0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5DA560245AC8C1005AE0EB /* test0.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -390,6 +391,7 @@
 		995C235B1FFCD86500B19DC6 /* 2.2.lamp.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.lamp.vs; sourceTree = "<group>"; };
 		995C235C1FFCD86500B19DC6 /* 2.2.basic_lighting.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.basic_lighting.vs; sourceTree = "<group>"; };
 		995C68081FF78EB60028EA8C /* main_light_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_light_1.cpp; sourceTree = "<group>"; };
+		CE5DA560245AC8C1005AE0EB /* test0.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test0.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -851,6 +853,7 @@
 				49C84513245925070059E26C /* lern2020_0.cpp */,
 				49C845242459BB900059E26C /* vsFileMemo.vs */,
 				49C845252459BC3F0059E26C /* fsFileMemo.fs */,
+				CE5DA560245AC8C1005AE0EB /* test0.cpp */,
 			);
 			path = LERN2020;
 			sourceTree = "<group>";
@@ -1007,6 +1010,7 @@
 				993F60C21FF4C9E1001CDCBB /* main_Camera.cpp in Sources */,
 				9954470F1FF3429C00D21B6F /* main_useShaderClass.cpp in Sources */,
 				995446FF1FF33FF000D21B6F /* sprite_renderer.cpp in Sources */,
+				CE5DA561245AC8C1005AE0EB /* test0.cpp in Sources */,
 				492C9DFD1FED2EBE000A9575 /* glad.c in Sources */,
 				995446E91FF3287B00D21B6F /* main_twoTriangle.cpp in Sources */,
 				492C9DFB1FED2E09000A9575 /* glm.cpp in Sources */,

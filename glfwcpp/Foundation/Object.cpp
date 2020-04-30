@@ -8,21 +8,42 @@
 
 #include "Object.hpp"
 
-Object::Object(GLint size, GLsizei vertexcount, const Vertex* vertex)
+Object::Object(GLint size, GLsizei vertexcount, const Vertex* vertex, const unsigned int indices[], GLsizei indicecount)
 {
-    // 頂点配列オブジェクトを作成します。
-    glGenVertexArrays(1, &vao);
-    // 頂点配列オブジェクトを結合して使用可能にします。
-    glBindVertexArray(vao);
+    glGenVertexArrays(1, &vao); // 頂点配列オブジェクトを作成します。
+    glGenBuffers(1, &vbo);      // 頂点バッファオブジェクト
     
-     // 頂点バッファオブジェクト
-    glGenBuffers(1, &vbo);
+    
+    glBindVertexArray(vao);// 頂点配列オブジェクトを結合して使用可能にします。
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, vertexcount * sizeof(Vertex), vertex, GL_STATIC_DRAW);
     
+    if (indices != NULL) {
+        glGenBuffers(1, &ebo);      // エレメントバッファオブジェクト
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, indicecount * sizeof(unsigned int), indices, GL_STATIC_DRAW);
+    }
+    
     // 結合されている頂点バッファオブジェクトを in 変数から参照できるようにする
-    glVertexAttribPointer(0, size, GL_FLOAT, GL_FALSE, 0, 0);
+    glVertexAttribPointer(0, size, GL_FLOAT, GL_FALSE, size * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
+    
+    
+    
+    // Old Code
+//    // 頂点配列オブジェクトを作成します。
+//    glGenVertexArrays(1, &vao);
+//    // 頂点配列オブジェクトを結合して使用可能にします。
+//    glBindVertexArray(vao);
+//
+//     // 頂点バッファオブジェクト
+//    glGenBuffers(1, &vbo);
+//    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+//    glBufferData(GL_ARRAY_BUFFER, vertexcount * sizeof(Vertex), vertex, GL_STATIC_DRAW);
+//
+//    // 結合されている頂点バッファオブジェクトを in 変数から参照できるようにする
+//    glVertexAttribPointer(0, size, GL_FLOAT, GL_FALSE, 0, 0);
+//    glEnableVertexAttribArray(0);
 }
 
 Object::~Object()
@@ -32,12 +53,20 @@ Object::~Object()
     
     // 頂点バッファオブジェクトを削除する
     glDeleteBuffers(1, &vbo);
+    
+    // エレメントバッファオブジェクトを削除する
+    glDeleteBuffers(1, &ebo);
 }
 
 void Object::bind() const
 {
     // 描画する頂点配列オブジェクトを指定する
     glBindVertexArray(vao);
+}
+
+GLuint Object::getVAO() const
+{
+    return vao;
 }
 
 /*
