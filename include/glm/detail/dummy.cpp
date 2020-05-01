@@ -1,37 +1,13 @@
-///////////////////////////////////////////////////////////////////////////////////
-/// OpenGL Mathematics (glm.g-truc.net)
-///
-/// Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
-/// Permission is hereby granted, free of charge, to any person obtaining a copy
-/// of this software and associated documentation files (the "Software"), to deal
-/// in the Software without restriction, including without limitation the rights
-/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-/// copies of the Software, and to permit persons to whom the Software is
-/// furnished to do so, subject to the following conditions:
-/// 
-/// The above copyright notice and this permission notice shall be included in
-/// all copies or substantial portions of the Software.
-/// 
-/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-/// THE SOFTWARE.
-///
 /// @ref core
 /// @file glm/core/dummy.cpp
-/// @date 2011-01-19 / 2011-06-15
-/// @author Christophe Riccio
 ///
 /// GLM is a header only library. There is nothing to compile. 
 /// dummy.cpp exist only a wordaround for CMake file.
-///////////////////////////////////////////////////////////////////////////////////
 
-#define GLM_FORCE_RADIANS
+/*
 #define GLM_MESSAGES
-#include "../glm.hpp"
+#include <glm/glm.hpp>
+#include <glm/ext.hpp>
 #include <limits>
 
 struct material
@@ -41,7 +17,8 @@ struct material
 	glm::vec4 diffuse; // Dcm
 	glm::vec4 specular; // Scm
 	float shininess; // Srm
-};
+};
+
 struct light
 {
 	glm::vec4 ambient; // Acli
@@ -58,11 +35,12 @@ struct light
 	float constantAttenuation; // K0
 	float linearAttenuation; // K1
 	float quadraticAttenuation;// K2
-};
+};
+
 
 // Sample 1
-#include "../vec3.hpp"// glm::vec3
-#include "../geometric.hpp"// glm::cross, glm::normalize
+#include <glm/vec3.hpp>// glm::vec3
+#include <glm/geometric.hpp>// glm::cross, glm::normalize
 
 glm::vec3 computeNormal
 (
@@ -79,11 +57,11 @@ typedef unsigned int GLuint;
 void glUniformMatrix4fv(GLuint, int, int, float*){}
 
 // Sample 2
-#include "../vec3.hpp" // glm::vec3
-#include "../vec4.hpp" // glm::vec4, glm::ivec4
-#include "../mat4x4.hpp" // glm::mat4
-#include "../gtc/matrix_transform.hpp" // glm::translate, glm::rotate, glm::scale, glm::perspective
-#include "../gtc/type_ptr.hpp" // glm::value_ptr
+#include <glm/vec3.hpp> // glm::vec3
+#include <glm/vec4.hpp> // glm::vec4, glm::ivec4
+#include <glm/mat4x4.hpp> // glm::mat4
+#include <glm/gtc/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale, glm::perspective
+#include <glm/gtc/type_ptr.hpp> // glm::value_ptr
 void func(GLuint LocationMVP, float Translate, glm::vec2 const & Rotate)
 {
 	glm::mat4 Projection = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 100.f);
@@ -96,10 +74,10 @@ void func(GLuint LocationMVP, float Translate, glm::vec2 const & Rotate)
 }
 
 // Sample 3
-#include "../vec2.hpp"// glm::vec2
-#include "../packing.hpp"// glm::packUnorm2x16
-#include "../integer.hpp"// glm::uint
-#include "../gtc/type_precision.hpp"// glm::i8vec2, glm::i32vec2
+#include <glm/vec2.hpp>// glm::vec2
+#include <glm/packing.hpp>// glm::packUnorm2x16
+#include <glm/integer.hpp>// glm::uint
+#include <glm/gtc/type_precision.hpp>// glm::i8vec2, glm::i32vec2
 std::size_t const VertexCount = 4;
 // Float quad geometry
 std::size_t const PositionSizeF32 = VertexCount * sizeof(glm::vec2);
@@ -143,6 +121,8 @@ struct intersection
 	glm::vec4 position;
 	glm::vec3 normal;
 };
+*/
+
 
 /*
 // Sample 4
@@ -184,8 +164,47 @@ glm::vec3 lighting
 	return Color;
 }
 */
+
+/*
+template <typename T, glm::precision P, template<typename, glm::precision> class vecType>
+T normalizeDotA(vecType<T, P> const & x, vecType<T, P> const & y)
+{
+	return glm::dot(x, y) * glm::inversesqrt(glm::dot(x, x) * glm::dot(y, y));
+}
+
+#define GLM_TEMPLATE_GENTYPE typename T, glm::precision P, template<typename, glm::precision> class
+
+template <GLM_TEMPLATE_GENTYPE vecType>
+T normalizeDotB(vecType<T, P> const & x, vecType<T, P> const & y)
+{
+	return glm::dot(x, y) * glm::inversesqrt(glm::dot(x, x) * glm::dot(y, y));
+}
+
+template <typename vecType>
+typename vecType::value_type normalizeDotC(vecType const & a, vecType const & b)
+{
+	return glm::dot(a, b) * glm::inversesqrt(glm::dot(a, a) * glm::dot(b, b));
+}
+*/
+
+
+// TODO:k comment out
 //int main()
 //{
-//    return 0;
+///*
+//	glm::vec1 o(1);
+//	glm::vec2 a(1);
+//	glm::vec3 b(1);
+//	glm::vec4 c(1);
+//
+//	glm::quat q;
+//	glm::dualquat p;
+//
+//	glm::mat4 m(1);
+//
+//	float a0 = normalizeDotA(a, a);
+//	float b0 = normalizeDotB(b, b);
+//	float c0 = normalizeDotC(c, c);
+//*/
+//	return 0;
 //}
-

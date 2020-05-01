@@ -7,10 +7,10 @@
 //
 
 #include "Shape.hpp"
-#include "Object.hpp"
+#include "LEObject.hpp"
 
-Shape::Shape(GLint size, GLsizei vertexcount, const Vertex * vertex, const unsigned int indices[], GLsizei indicecount, bool isFill)
-:object(new Object(size, vertexcount, vertex, indices, indicecount))
+Shape::Shape(GLint size, GLsizei vertexcount, const LEVertex * vertex, const unsigned int indices[], GLsizei indicecount, bool isFill)
+:object(new LEObject(size, vertexcount, vertex, indices, indicecount))
 ,vertexcount(vertexcount)
 ,isFill(isFill)
 ,indiceCount(indicecount)

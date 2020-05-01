@@ -11,15 +11,15 @@
 
 #include "all.h"
 //#include "Object.hpp"
-class Object;
-class Vertex;
+class LEObject;
+class LEVertex;
 
 // 図形の描画
 class Shape
 {
 public:
     // 図形データ
-    std::shared_ptr<const Object> object;
+    std::shared_ptr<const LEObject> object;
     
 protected:
     // 描画に使う頂点の数
@@ -36,7 +36,7 @@ public:
     // indices: EBO対象
     // indicecount: EBO頂点の数
     // isFill: 内部をFillするか
-    Shape(GLint size, GLsizei vertexcount, const Vertex * vertex, const unsigned int indices[] = nullptr, GLsizei indicecount = 0, bool isFill = true);
+    Shape(GLint size, GLsizei vertexcount, const LEVertex * vertex, const unsigned int indices[] = nullptr, GLsizei indicecount = 0, bool isFill = true);
     
     // 描画
     void draw() const;

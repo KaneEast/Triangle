@@ -37,7 +37,7 @@
 
 // in the last
 #include "Shape.hpp"
-#include "Object.hpp"
+#include "LEObject.hpp"
 
 
 #endif /* all_h */

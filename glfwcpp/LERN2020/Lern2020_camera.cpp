@@ -2,6 +2,7 @@
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "all.h"
+#include <learnopengl/Model.h>
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
