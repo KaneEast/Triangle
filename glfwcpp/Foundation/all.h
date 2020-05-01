@@ -30,7 +30,7 @@
 
 //#ifndef STB_IMAGE_IMPLEMENTATION
 // STB_IMAGE_IMPLEMENTATION must defined in cpp file
-#include <stb_image.h>
+//#include <stb_image.h>
 #include "FileReader.hpp"
 
 

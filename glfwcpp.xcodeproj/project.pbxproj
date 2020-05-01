@@ -29,6 +29,8 @@
 		CE2FFEBB245C0BF800299621 /* LernModelByAssimp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2FFEBA245C0BF800299621 /* LernModelByAssimp.cpp */; };
 		CE2FFFDC245C0F6300299621 /* dummy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2FFF1B245C0F6300299621 /* dummy.cpp */; };
 		CE2FFFDD245C0F6300299621 /* glm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2FFF26245C0F6300299621 /* glm.cpp */; };
+		CE2FFFE0245C14ED00299621 /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2FFFDE245C14ED00299621 /* ResourceManager.cpp */; };
+		CE2FFFE2245C175C00299621 /* GameMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2FFFE1245C175C00299621 /* GameMain.cpp */; };
 		CE5DA563245AD17E005AE0EB /* Lern2020_GLSL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5DA562245AD17E005AE0EB /* Lern2020_GLSL.cpp */; };
 /* End PBXBuildFile section */
 
@@ -453,6 +455,9 @@
 		CE2FFFD9245C0F6300299621 /* rotate_normalized_axis.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rotate_normalized_axis.hpp; sourceTree = "<group>"; };
 		CE2FFFDA245C0F6300299621 /* projection.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = projection.inl; sourceTree = "<group>"; };
 		CE2FFFDB245C0F6300299621 /* type_aligned.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = type_aligned.hpp; sourceTree = "<group>"; };
+		CE2FFFDE245C14ED00299621 /* ResourceManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceManager.cpp; sourceTree = "<group>"; };
+		CE2FFFDF245C14ED00299621 /* ResourceManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourceManager.hpp; sourceTree = "<group>"; };
+		CE2FFFE1245C175C00299621 /* GameMain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameMain.cpp; sourceTree = "<group>"; };
 		CE5DA562245AD17E005AE0EB /* Lern2020_GLSL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Lern2020_GLSL.cpp; sourceTree = "<group>"; };
 		CE5DA565245AD6AB005AE0EB /* lern2020_0.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lern2020_0.vs; sourceTree = "<group>"; };
 		CE5DA566245AD6B7005AE0EB /* lern2020_0.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lern2020_0.fs; sourceTree = "<group>"; };
@@ -665,6 +670,8 @@
 				995446FB1FF33FF000D21B6F /* sprite_renderer.h */,
 				995446FC1FF33FF000D21B6F /* texture.cpp */,
 				995446FD1FF33FF000D21B6F /* texture.h */,
+				CE2FFFDE245C14ED00299621 /* ResourceManager.cpp */,
+				CE2FFFDF245C14ED00299621 /* ResourceManager.hpp */,
 			);
 			path = learnopengl;
 			sourceTree = "<group>";
@@ -694,6 +701,7 @@
 			children = (
 				CE2FFE7B245C030400299621 /* Game.cpp */,
 				CE2FFE7C245C030400299621 /* Game.hpp */,
+				CE2FFFE1245C175C00299621 /* GameMain.cpp */,
 			);
 			path = Game_0;
 			sourceTree = "<group>";
@@ -1185,12 +1193,14 @@
 				995446FF1FF33FF000D21B6F /* sprite_renderer.cpp in Sources */,
 				492C9DFD1FED2EBE000A9575 /* glad.c in Sources */,
 				995446FE1FF33FF000D21B6F /* shader.cpp in Sources */,
+				CE2FFFE0245C14ED00299621 /* ResourceManager.cpp in Sources */,
 				CE2FFFDC245C0F6300299621 /* dummy.cpp in Sources */,
 				CE2FFEBB245C0BF800299621 /* LernModelByAssimp.cpp in Sources */,
 				49C8451A2459596D0059E26C /* Shape.cpp in Sources */,
 				CE2FFE7D245C030400299621 /* Game.cpp in Sources */,
 				49C845172459559D0059E26C /* LEObject.cpp in Sources */,
 				CE2FFFDD245C0F6300299621 /* glm.cpp in Sources */,
+				CE2FFFE2245C175C00299621 /* GameMain.cpp in Sources */,
 				995447001FF33FF000D21B6F /* texture.cpp in Sources */,
 				49C845222459B34A0059E26C /* FileReader.cpp in Sources */,
 				49C84514245925070059E26C /* lern2020_0.cpp in Sources */,

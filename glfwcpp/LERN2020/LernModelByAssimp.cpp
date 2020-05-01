@@ -1,6 +1,6 @@
 #ifdef k_DEF_LERN2020_MODEL
 
-#define STB_IMAGE_IMPLEMENTATION
+//#define STB_IMAGE_IMPLEMENTATION
 #include "all.h"
 #include <learnopengl/Model.h>
 
