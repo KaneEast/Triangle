@@ -25,6 +25,8 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include <learnopengl/shader.h>
+#include <learnopengl/camera.h>
+//#include <learnopengl/Model.h>
 
 //#ifndef STB_IMAGE_IMPLEMENTATION
 // STB_IMAGE_IMPLEMENTATION must defined in cpp file

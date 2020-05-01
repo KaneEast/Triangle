@@ -19,7 +19,9 @@
 
 //triangles
 //#define k_DEF_LERN2020_0
-#define k_DEF_LERN2020GLSL
+//#define k_DEF_LERN2020GLSL
+#define k_DEF_LERN2020_CAMERA
+
 //#ifdef k_DEF_LERN2020_01
 //#define k_DEF_triangle_1
 //#define k_DEF_quad_1

@@ -13,6 +13,8 @@
 
 class Window
 {
+
+public:
     // ウィンドウのハンドル
     GLFWwindow * const window;
     

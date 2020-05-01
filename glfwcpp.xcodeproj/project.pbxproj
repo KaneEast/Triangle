@@ -23,7 +23,8 @@
 		995446FF1FF33FF000D21B6F /* sprite_renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 995446FA1FF33FF000D21B6F /* sprite_renderer.cpp */; };
 		995447001FF33FF000D21B6F /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 995446FC1FF33FF000D21B6F /* texture.cpp */; };
 		995447021FF3405E00D21B6F /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 995447011FF3405E00D21B6F /* libGLEW.a */; };
-		CE5DA561245AC8C1005AE0EB /* test0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5DA560245AC8C1005AE0EB /* test0.cpp */; };
+		CE2FFE78245BF05500299621 /* Lern2020_camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2FFE77245BF05500299621 /* Lern2020_camera.cpp */; };
+		CE2FFE7D245C030400299621 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2FFE7B245C030400299621 /* Game.cpp */; };
 		CE5DA563245AD17E005AE0EB /* Lern2020_GLSL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5DA562245AD17E005AE0EB /* Lern2020_GLSL.cpp */; };
 /* End PBXBuildFile section */
 
@@ -325,8 +326,8 @@
 		993F60BA1FF49DCC001CDCBB /* 5.1.transform.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 5.1.transform.vs; sourceTree = "<group>"; };
 		993F60BE1FF4B84C001CDCBB /* 6.1.coordinate_systems.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 6.1.coordinate_systems.vs; sourceTree = "<group>"; };
 		993F60BF1FF4B84D001CDCBB /* 6.1.coordinate_systems.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 6.1.coordinate_systems.fs; sourceTree = "<group>"; };
-		993F60C51FF4E1EE001CDCBB /* 7.1.camera.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 7.1.camera.vs; sourceTree = "<group>"; };
-		993F60C61FF4E1EF001CDCBB /* 7.1.camera.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 7.1.camera.fs; sourceTree = "<group>"; };
+		993F60C51FF4E1EE001CDCBB /* 7.4.camera.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 7.4.camera.vs; sourceTree = "<group>"; };
+		993F60C61FF4E1EF001CDCBB /* 7.4.camera.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 7.4.camera.fs; sourceTree = "<group>"; };
 		994C727D1FFDCE1B003032AA /* 3.1.materials.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 3.1.materials.vs; sourceTree = "<group>"; };
 		994C727E1FFDCE1B003032AA /* 3.1.materials.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 3.1.materials.fs; sourceTree = "<group>"; };
 		994C727F1FFDCE1B003032AA /* 3.1.lamp.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 3.1.lamp.vs; sourceTree = "<group>"; };
@@ -362,7 +363,9 @@
 		995C235A1FFCD86400B19DC6 /* 2.2.basic_lighting.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.basic_lighting.fs; sourceTree = "<group>"; };
 		995C235B1FFCD86500B19DC6 /* 2.2.lamp.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.lamp.vs; sourceTree = "<group>"; };
 		995C235C1FFCD86500B19DC6 /* 2.2.basic_lighting.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.basic_lighting.vs; sourceTree = "<group>"; };
-		CE5DA560245AC8C1005AE0EB /* test0.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test0.cpp; sourceTree = "<group>"; };
+		CE2FFE77245BF05500299621 /* Lern2020_camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Lern2020_camera.cpp; sourceTree = "<group>"; };
+		CE2FFE7B245C030400299621 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		CE2FFE7C245C030400299621 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		CE5DA562245AD17E005AE0EB /* Lern2020_GLSL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Lern2020_GLSL.cpp; sourceTree = "<group>"; };
 		CE5DA565245AD6AB005AE0EB /* lern2020_0.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lern2020_0.vs; sourceTree = "<group>"; };
 		CE5DA566245AD6B7005AE0EB /* lern2020_0.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lern2020_0.fs; sourceTree = "<group>"; };
@@ -407,8 +410,8 @@
 				995C234F1FFCD00100B19DC6 /* 1.colors.vs */,
 				995C234D1FFCD00000B19DC6 /* 1.lamp.fs */,
 				995C23501FFCD00100B19DC6 /* 1.lamp.vs */,
-				993F60C61FF4E1EF001CDCBB /* 7.1.camera.fs */,
-				993F60C51FF4E1EE001CDCBB /* 7.1.camera.vs */,
+				993F60C61FF4E1EF001CDCBB /* 7.4.camera.fs */,
+				993F60C51FF4E1EE001CDCBB /* 7.4.camera.vs */,
 				993F60BF1FF4B84D001CDCBB /* 6.1.coordinate_systems.fs */,
 				993F60BE1FF4B84C001CDCBB /* 6.1.coordinate_systems.vs */,
 				993F60B91FF49DCB001CDCBB /* 5.1.transform.fs */,
@@ -749,6 +752,7 @@
 		496838091FE16C26008CF242 /* glfwcpp */ = {
 			isa = PBXGroup;
 			children = (
+				CE2FFE7A245C028E00299621 /* Game_0 */,
 				49C84512245924910059E26C /* LERN2020 */,
 				49C84510245878680059E26C /* Foundation */,
 				491A2EEB1FE411FA00F4E040 /* resources */,
@@ -826,11 +830,10 @@
 		49C84512245924910059E26C /* LERN2020 */ = {
 			isa = PBXGroup;
 			children = (
+				CE2FFE79245BF06E00299621 /* MEMO */,
 				49C84513245925070059E26C /* lern2020_0.cpp */,
 				CE5DA562245AD17E005AE0EB /* Lern2020_GLSL.cpp */,
-				49C845242459BB900059E26C /* vsFileMemo.vs */,
-				49C845252459BC3F0059E26C /* fsFileMemo.fs */,
-				CE5DA560245AC8C1005AE0EB /* test0.cpp */,
+				CE2FFE77245BF05500299621 /* Lern2020_camera.cpp */,
 			);
 			path = LERN2020;
 			sourceTree = "<group>";
@@ -860,6 +863,24 @@
 				995447071FF3406900D21B6F /* wglew.h */,
 			);
 			path = GL;
+			sourceTree = "<group>";
+		};
+		CE2FFE79245BF06E00299621 /* MEMO */ = {
+			isa = PBXGroup;
+			children = (
+				49C845242459BB900059E26C /* vsFileMemo.vs */,
+				49C845252459BC3F0059E26C /* fsFileMemo.fs */,
+			);
+			path = MEMO;
+			sourceTree = "<group>";
+		};
+		CE2FFE7A245C028E00299621 /* Game_0 */ = {
+			isa = PBXGroup;
+			children = (
+				CE2FFE7B245C030400299621 /* Game.cpp */,
+				CE2FFE7C245C030400299621 /* Game.hpp */,
+			);
+			path = Game_0;
 			sourceTree = "<group>";
 		};
 		CE5DA564245AD679005AE0EB /* GLERN2020 */ = {
@@ -931,12 +952,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5DA563245AD17E005AE0EB /* Lern2020_GLSL.cpp in Sources */,
+				CE2FFE78245BF05500299621 /* Lern2020_camera.cpp in Sources */,
 				995446FF1FF33FF000D21B6F /* sprite_renderer.cpp in Sources */,
-				CE5DA561245AC8C1005AE0EB /* test0.cpp in Sources */,
 				492C9DFD1FED2EBE000A9575 /* glad.c in Sources */,
 				492C9DFB1FED2E09000A9575 /* glm.cpp in Sources */,
 				995446FE1FF33FF000D21B6F /* shader.cpp in Sources */,
 				49C8451A2459596D0059E26C /* Shape.cpp in Sources */,
+				CE2FFE7D245C030400299621 /* Game.cpp in Sources */,
 				492C9DFA1FED2E09000A9575 /* dummy.cpp in Sources */,
 				49C845172459559D0059E26C /* Object.cpp in Sources */,
 				995447001FF33FF000D21B6F /* texture.cpp in Sources */,
