@@ -32,6 +32,8 @@
 		CE2FFFE0245C14ED00299621 /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2FFFDE245C14ED00299621 /* ResourceManager.cpp */; };
 		CE2FFFE2245C175C00299621 /* GameMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2FFFE1245C175C00299621 /* GameMain.cpp */; };
 		CE5DA563245AD17E005AE0EB /* Lern2020_GLSL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5DA562245AD17E005AE0EB /* Lern2020_GLSL.cpp */; };
+		CEBA43EC246E8A3000DA72A8 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEBA43EA246E8A3000DA72A8 /* GameObject.cpp */; };
+		CEBA43EF246E8B7800DA72A8 /* GameLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEBA43ED246E8B7800DA72A8 /* GameLevel.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -463,6 +465,20 @@
 		CE5DA566245AD6B7005AE0EB /* lern2020_0.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lern2020_0.fs; sourceTree = "<group>"; };
 		CE5DA567245AE4A7005AE0EB /* lern2020_1.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lern2020_1.vs; sourceTree = "<group>"; };
 		CE5DA568245AE5A6005AE0EB /* lern2020_1.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lern2020_1.fs; sourceTree = "<group>"; };
+		CEBA43EA246E8A3000DA72A8 /* GameObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
+		CEBA43EB246E8A3000DA72A8 /* GameObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameObject.hpp; sourceTree = "<group>"; };
+		CEBA43ED246E8B7800DA72A8 /* GameLevel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameLevel.cpp; sourceTree = "<group>"; };
+		CEBA43EE246E8B7800DA72A8 /* GameLevel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameLevel.hpp; sourceTree = "<group>"; };
+		CEBA43F1246E8E6900DA72A8 /* level1.lvl */ = {isa = PBXFileReference; lastKnownFileType = text; path = level1.lvl; sourceTree = "<group>"; };
+		CEBA43F2246E8EAD00DA72A8 /* level2.lvl */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = level2.lvl; sourceTree = "<group>"; };
+		CEBA43F3246E8F0200DA72A8 /* level3.lvl */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = level3.lvl; sourceTree = "<group>"; };
+		CEBA43F4246E8F2600DA72A8 /* level4.lvl */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = level4.lvl; sourceTree = "<group>"; };
+		CEBA43F6246E943300DA72A8 /* sprite.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = sprite.vs; sourceTree = "<group>"; };
+		CEBA43F7246E944900DA72A8 /* sprite.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = sprite.fs; sourceTree = "<group>"; };
+		CEBA43F8246E95FE00DA72A8 /* paddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paddle.png; sourceTree = "<group>"; };
+		CEBA43F9246E95FE00DA72A8 /* block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block.png; sourceTree = "<group>"; };
+		CEBA43FA246E95FE00DA72A8 /* block_solid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block_solid.png; sourceTree = "<group>"; };
+		CEBA43FB246E95FE00DA72A8 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -488,6 +504,9 @@
 		491A2EEB1FE411FA00F4E040 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				4928C6A01FEE68B20089F6B7 /* textures */,
+				CEBA43F5246E93FF00DA72A8 /* shaders */,
+				CEBA43F0246E8E4600DA72A8 /* Game */,
 				CE2FFEBC245C0CB900299621 /* objs */,
 				CE5DA564245AD679005AE0EB /* GLERN2020 */,
 				994C72801FFDCE1B003032AA /* 3.1.lamp.fs */,
@@ -516,7 +535,6 @@
 				993F60B41FF48603001CDCBB /* 4.1.texture.vs */,
 				995447111FF343C700D21B6F /* useShaderClass.fs */,
 				995447121FF343C700D21B6F /* useShaderClass.vs */,
-				4928C6A01FEE68B20089F6B7 /* textures */,
 				49C8451B245962910059E26C /* L2020_0.vs */,
 				49C8451C245962A10059E26C /* L2020_0.fs */,
 				CE2FFED3245C0D7E00299621 /* modelload.vs */,
@@ -528,6 +546,10 @@
 		4928C6A01FEE68B20089F6B7 /* textures */ = {
 			isa = PBXGroup;
 			children = (
+				CEBA43FB246E95FE00DA72A8 /* background.jpg */,
+				CEBA43FA246E95FE00DA72A8 /* block_solid.png */,
+				CEBA43F9246E95FE00DA72A8 /* block.png */,
+				CEBA43F8246E95FE00DA72A8 /* paddle.png */,
 				99598D5A1FF0C04800EB94AF /* container2_specular.png */,
 				4928C6A11FEE68B20089F6B7 /* container.jpg */,
 				4928C6A21FEE68B20089F6B7 /* container2.png */,
@@ -702,6 +724,10 @@
 				CE2FFE7B245C030400299621 /* Game.cpp */,
 				CE2FFE7C245C030400299621 /* Game.hpp */,
 				CE2FFFE1245C175C00299621 /* GameMain.cpp */,
+				CEBA43EA246E8A3000DA72A8 /* GameObject.cpp */,
+				CEBA43EB246E8A3000DA72A8 /* GameObject.hpp */,
+				CEBA43ED246E8B7800DA72A8 /* GameLevel.cpp */,
+				CEBA43EE246E8B7800DA72A8 /* GameLevel.hpp */,
 			);
 			path = Game_0;
 			sourceTree = "<group>";
@@ -1131,6 +1157,26 @@
 			path = GLERN2020;
 			sourceTree = "<group>";
 		};
+		CEBA43F0246E8E4600DA72A8 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				CEBA43F1246E8E6900DA72A8 /* level1.lvl */,
+				CEBA43F2246E8EAD00DA72A8 /* level2.lvl */,
+				CEBA43F3246E8F0200DA72A8 /* level3.lvl */,
+				CEBA43F4246E8F2600DA72A8 /* level4.lvl */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		CEBA43F5246E93FF00DA72A8 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				CEBA43F6246E943300DA72A8 /* sprite.vs */,
+				CEBA43F7246E944900DA72A8 /* sprite.fs */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1188,8 +1234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBA43EF246E8B7800DA72A8 /* GameLevel.cpp in Sources */,
 				CE5DA563245AD17E005AE0EB /* Lern2020_GLSL.cpp in Sources */,
 				CE2FFE78245BF05500299621 /* Lern2020_camera.cpp in Sources */,
+				CEBA43EC246E8A3000DA72A8 /* GameObject.cpp in Sources */,
 				995446FF1FF33FF000D21B6F /* sprite_renderer.cpp in Sources */,
 				492C9DFD1FED2EBE000A9575 /* glad.c in Sources */,
 				995446FE1FF33FF000D21B6F /* shader.cpp in Sources */,

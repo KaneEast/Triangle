@@ -19,9 +19,9 @@
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
 // The Width of the screen
-const GLuint SCREEN_WIDTH = 400;
+const GLuint SCREEN_WIDTH = 800;
 // The height of the screen
-const GLuint SCREEN_HEIGHT = 300;
+const GLuint SCREEN_HEIGHT = 600;
 
 Game Breakout(SCREEN_WIDTH, SCREEN_HEIGHT);
 
