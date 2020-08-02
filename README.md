@@ -1,3 +1,3 @@
 # Triangle
 
-### Glfw lern & game dev project
+### Glfw learn & game dev project
